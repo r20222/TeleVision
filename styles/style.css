@@ -207,4 +207,15 @@ button:hover{
     button{
         border: 2px solid black;
     }
+    .square{
+        width:150px;
+        height:150px;
+    }
+    .face{
+        width: 150px;
+        height: 150px;
+    }
+    .square-container{
+        perspective: 1000px;;
+    }
 }
