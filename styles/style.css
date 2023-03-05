@@ -7,7 +7,7 @@ body{
     align-items: center;
 }
 h1{
-    color:rgb(2, 122, 24);
+    color:black;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .screen{
@@ -47,7 +47,6 @@ h1{
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
 }
-/* misschien kan het aangepakt worden met de z-index; */
 
 .channel1{
     background: linear-gradient(
