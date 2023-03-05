@@ -186,7 +186,7 @@ button{
     cursor:pointer;
     background-color:var(--button-color);
     color: black;
-    border:none;
+    border: 2px solid black;
     transition-duration:.5s;
     height:3rem;
     width:5rem;
@@ -202,10 +202,6 @@ button:hover{
         --tv-screen-height: 22rem;
         --inner-screen-width: 28rem;
         --inner-screen-height: 20rem;
-    }
-
-    button{
-        border: 2px solid black;
     }
     .square{
         width:150px;
