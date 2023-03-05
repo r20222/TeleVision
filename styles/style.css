@@ -1,0 +1,186 @@
+body{
+    height:100vh;
+    background-color: #92d7ba;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+h1{
+    color:rgb(2, 122, 24);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.screen{
+    width:20rem;
+    height:15rem;
+    background-color:rgb(0, 0, 0);
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    border-radius: 5px;
+}
+.inner-screen{
+    background: rgb(92, 92, 89);
+    width:18rem;
+    height: 13rem;
+    position:relative;
+    overflow:hidden;
+}
+.standard{
+    width:20rem;
+    height: 5rem;
+    border-radius: 50%;
+    background: radial-gradient(
+        ellipse at 50% 80%,
+        transparent 60%,
+        rgb(117, 143, 155) 50%
+    )
+}
+
+/* channel 1 with 3d square */
+.channel{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+/* misschien kan het aangepakt worden met de z-index; */
+
+.channel1{
+    background: linear-gradient(
+        hotpink, cyan
+    );
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    transition-duration: .5s;
+}
+
+.click-on{
+    opacity:1;
+    z-index:1;
+    transition-duration: .5s;
+}
+
+.square-container{
+    perspective: 500px;
+}
+.square{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    animation: photos 20s linear infinite;
+}
+
+@keyframes photos {
+    100%{
+        transform: rotateY(360deg);
+    }
+}
+    
+.face{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+}
+.front {
+    transform: translateZ(90px);
+  }
+
+  /* images */
+.astronaut{
+    max-height: 100%;
+    }
+.square-img{
+        max-height: 100%;
+        }
+.farola, .torre{
+    width:100%;
+}
+
+.back {
+transform: translateZ(-90px) rotateY(180deg);
+}
+
+.right {
+transform: rotateY(-90deg) translateZ(100px);
+}
+
+.left {
+transform: rotateY(90deg) translateZ(100px);
+}
+
+/* channel 2 */
+/* misschien kan ik het stacken met grid????? */
+
+.channel2{
+    background: repeating-linear-gradient(
+        to left,
+        rgb(40, 99, 101) 15%, white 16%);
+
+    background-position: center center;
+    background-size: 500%;
+    width:200%;
+    height:100%;
+    animation: broken 5s linear infinite;
+}
+
+@keyframes broken{
+    0%{
+        
+        transform: translateX(0rem);
+    }
+    100%{
+        transform: translateX(-50%);
+    }
+}
+
+
+/* channel 3 */
+.channel3{
+    background: repeating-radial-gradient(
+        closest-side circle,
+        black calc(100% - 18em),
+        red, orange,
+        yellow, green,
+        blue, indigo,
+        violet
+        );
+    width:100%;
+    height:100%;
+    background-position: center center;
+    animation: trippy 5s linear infinite;
+}
+
+@keyframes trippy{
+    0%{
+        background-size:100% 100%;
+    }
+    100%{
+        background-size: calc(100% + 36em) calc(100% + 36em);
+    }
+}
+
+/* buttons */
+footer{
+    display:flex;
+}
+button{
+    cursor:pointer;
+    background-color:#2a94d2;
+    color: #C5D1EB;
+    border:none;
+    transition-duration:.5s;
+    height:3rem;
+    width:5rem;
+    margin: 1rem;
+}
+button:hover{
+    background-color: hotpink;
+}
+
